@@ -31,6 +31,8 @@ def main():
                 return
         for object in updateable:
             object.update(dt)
+        for asteroid in asteroids:
+            asteroid.collision(player)
         screen.fill((0,0,0))
         for object in drawable:
             object.draw(screen)
